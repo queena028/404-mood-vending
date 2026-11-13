@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151329">
+  <meta name="description" content="買不到快樂，但可以領取一點小確幸。移動 404 心情夾娃娃機的夾爪，把娃娃、暖心小紙條與一份心情體驗帶回家。">
+  <title>404 心情販賣所 · 領取一點小確幸</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#vending">跳到夾娃娃機</a>
+  <div class="night-sky" aria-hidden="true"><i class="moon"></i><i class="shooting-star"></i></div>
+  <header class="site-header wrap">
+    <a class="brand" href="./index.html" aria-label="404 心情販賣所首頁"><span class="brand-mark">4<span>✦</span>4</span><span>心情販賣所<small>MOOD VENDING MACHINE</small></span></a>
+    <a class="open-sign" href="#vending"><span class="status-dot"></span> 今晚也為你營業 <span class="mono">OPEN 24/7</span></a>
+  </header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy"><p class="eyebrow"><span>✦</span> A LITTLE COMFORT, ANYTIME.</p><h1 id="page-title">買不到快樂，<br>但可以領取一點<span>小確幸。</span></h1><p class="intro-description">有些東西，現實裡買不到。<br>在這裡，一次深呼吸就能換一點溫柔。</p></div>
+      <div class="mood-panel"><div class="section-kicker"><span class="step-number">01</span><span>先讓心情，找到位置</span><span aria-hidden="true">↙</span></div><h2>今天過得怎麼樣？</h2><p>或許這裡有你需要的東西。</p><div class="mood-options" aria-label="選擇今天的心情"><button class="mood-button" data-mood="tired" aria-pressed="false"><span aria-hidden="true">☾</span>有點累</button><button class="mood-button" data-mood="sad" aria-pressed="false"><span aria-hidden="true">☂</span>不太開心</button><button class="mood-button" data-mood="bored" aria-pressed="false"><span aria-hidden="true">〰</span>有點無聊</button><button class="mood-button" data-mood="good" aria-pressed="false"><span aria-hidden="true">✷</span>心情不錯</button><button class="mood-button" data-mood="unsure" aria-pressed="false"><span aria-hidden="true">?</span>說不上來</button></div><button id="skip-mood" class="text-button">先逛逛，瀏覽全部商品 <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section id="vending" class="vending-section" aria-labelledby="machine-heading">
+      <div class="machine-caption"><p><span class="step-number">02</span> 移動夾爪，把今天需要的溫柔帶回家</p><span class="mono">A LITTLE CATCH. A LITTLE COMFORT.</span></div>
+      <div id="claw-machine" class="claw-machine">
+        <div class="arcade-marquee">
+          <span class="marquee-star" aria-hidden="true">✦</span>
+          <div class="arcade-title"><span class="arcade-404">404</span><div><h2 id="machine-heading">心情夾娃娃機</h2><p>THE LITTLE COMFORT CLUB</p></div></div>
+          <div class="arcade-sticker">每一次伸手<br><strong>都接得住溫柔</strong></div>
+        </div>
+        <div class="arcade-window">
+          <div class="arcade-status"><span><i class="status-dot"></i> EVERY CATCH IS A LITTLE WIN</span><span id="product-count">連線星空中…</span></div>
+          <p id="recommendation" class="recommendation" role="status">不急著選，先看看娃娃旁的小紙條。</p>
+          <div id="claw-playfield" class="claw-playfield" tabindex="0" role="group" aria-label="心情娃娃遊戲區。可左右捲動，使用方向鍵移動夾爪，Enter 或空白鍵抓取。" aria-describedby="playfield-help">
+            <div id="claw-inner" class="claw-inner">
+              <div class="gantry-rail" aria-hidden="true"></div>
+              <div id="claw-carriage" class="claw-carriage" aria-hidden="true"><div class="claw-motor"></div><div class="claw-assembly"><div class="claw-cable"></div><div class="claw-hand"><span class="claw-palm"></span><span class="claw-finger finger-left"></span><span class="claw-finger finger-right"></span><span class="claw-finger finger-middle"></span><div id="claw-prize" class="claw-prize"></div></div></div></div>
+              <p class="window-whisper" aria-hidden="true">不是每一天都順利，但每一天都值得被抱抱。</p>
+              <div id="product-grid" class="toy-floor" aria-label="娃娃與心情紙條"><p class="loading-text">娃娃們正在帶上今晚的小紙條…</p></div>
+            </div>
+          </div>
+          <div id="load-error" class="load-error" hidden><p id="load-error-message"></p><button id="retry-load" class="secondary-button">重新載入娃娃</button></div>
+          <div class="window-bottom"><span id="lcd-message">你已經做得很好了。</span><span id="playfield-help">← 左右移動看更多 · 點娃娃讀小紙條 →</span></div>
+        </div>
+        <div class="arcade-deck">
+          <div class="target-display"><span class="deck-label">YOUR LITTLE COMPANION</span><strong id="target-name">正在準備心情娃娃…</strong><span id="target-price">不用投幣，只需要一點心意。</span></div>
+          <div class="direction-controls" aria-label="移動夾爪"><button id="move-left" class="direction-button" aria-label="夾爪移向上一隻娃娃" disabled>←</button><span>MOVE</span><button id="move-right" class="direction-button" aria-label="夾爪移向下一隻娃娃" disabled>→</button></div>
+          <button id="grab-button" class="grab-button" disabled><span class="grab-button-face">夾一下</span><span class="grab-button-label">CATCH A LITTLE JOY</span></button>
+        </div>
+        <div class="arcade-bottom"><div class="collection-label"><span>↓</span><p>領取口<small>TAKE YOUR LITTLE COMPANION</small></p></div><div id="collection-slot" class="collection-slot" aria-label="娃娃領取口"><span class="slot-message">每隻娃娃，都帶著一張寫給你的紙條。</span></div><span class="arcade-free">不收硬幣<br><strong>只收心意 ♡</strong></span></div>
+      </div>
+      <div class="grab-status-line"><p id="grab-status" role="status">選一隻娃娃，或直接按「夾一下」。每一次都會夾到。</p><button id="cancel-grab" class="text-button" hidden>取消抓取</button></div>
+      <div class="arcade-feet" aria-hidden="true"><span></span><span></span></div>
+      <div class="ground-glow" aria-hidden="true"></div>
+    </section>
+    <section id="collection" class="collection-section" aria-labelledby="collection-title">
+      <div class="collection-heading"><div><p class="eyebrow">YOUR LITTLE COMPANIONS</p><h2 id="collection-title">收藏架 <span id="collection-count">0</span></h2></div><span>給它一個名字，留一個位置。</span></div>
+      <div id="collection-grid" class="collection-grid"><p class="collection-empty">小架子還空著。夾到娃娃後，幫它取個名字，再收藏到這裡吧。♡</p></div>
+      <p id="collection-status" class="collection-storage-note" role="status">收藏只儲存在這個瀏覽器；清除網站資料或換裝置後不會保留。</p>
+    </section>
+    <section class="after-note"><span class="tiny-star" aria-hidden="true">✧</span><p>這裡不販售答案，只提供一個稍作停留的地方。</p><span class="tiny-star" aria-hidden="true">✧</span></section>
+  </main>
+  <footer class="site-footer wrap"><span>404 心情販賣所 © <span id="year">2026</span></span><span>無須登入 · 沒有真實付款 · 心情只留在你的瀏覽器</span><span class="mono">MADE FOR YOUR LITTLE MOMENTS ✦</span></footer>
+  <dialog id="experience-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><button id="close-dialog" class="close-button" aria-label="關閉視窗">✕</button><div id="dialog-content"></div></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="noscript-notice">這台販賣機需要啟用 JavaScript 才能讀取商品與互動；所有處理都在你的瀏覽器完成。</p></noscript>
+</body>
+</html>
