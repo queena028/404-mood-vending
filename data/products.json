@@ -1,0 +1,99 @@
+[
+  {
+    "id": "MV-001",
+    "name": "暫停的三分鐘",
+    "category": "時間罐頭",
+    "price": "一次深呼吸",
+    "description": "把世界調成靜音，留三分鐘給自己。",
+    "effect": "獲得一小段不用努力、也不用解釋的時間。",
+    "sideEffect": "可能會發現，原來肩膀可以放得這麼低。",
+    "receiptMessage": "這三分鐘，不必完成什麼，安心呼吸就好。",
+    "icon": "pause",
+    "color": "#80DEE6",
+    "interactionType": "timer",
+    "interactionConfig": {
+      "durationSeconds": 180,
+      "intro": "不急著變好。現在，只要和自己待一會兒。",
+      "completionMessage": "三分鐘過去了。謝謝你，願意把這一點時間留給自己。"
+    },
+    "recommendedMoods": ["tired", "unsure"]
+  },
+  {
+    "id": "MV-002",
+    "name": "沒說出口的話",
+    "category": "心事郵局",
+    "price": "一點點坦白",
+    "description": "寄一封不用地址、也不必寄出的信。",
+    "effect": "替擠在心裡的句子，找到一個安靜的出口。",
+    "sideEffect": "寫完之後，心裡可能會多出一點空位。",
+    "receiptMessage": "有些話不必被誰聽見，也值得被好好安放。",
+    "icon": "letter",
+    "color": "#FF8ABD",
+    "interactionType": "journal",
+    "interactionConfig": {
+      "prompt": "如果不必擔心回覆，你現在最想說什麼？",
+      "placeholder": "親愛的＿＿，其實我一直想說……",
+      "responseMessage": "收到了。你不需要立刻整理好自己，這些話在這裡很安全。",
+      "maxLength": 2000
+    },
+    "recommendedMoods": ["sad", "unsure", "tired"]
+  },
+  {
+    "id": "MV-003",
+    "name": "今天的小冒險",
+    "category": "日常探險",
+    "price": "一小撮好奇心",
+    "description": "轉個彎，讓平凡的一天長出新劇情。",
+    "effect": "隨機獲得一件小任務，替日常開一扇窗。",
+    "sideEffect": "可能不小心，喜歡上今天。",
+    "receiptMessage": "不用出發去很遠的地方，也能遇到新的風景。",
+    "icon": "spark",
+    "color": "#FFF0CF",
+    "interactionType": "random",
+    "interactionConfig": {
+      "intro": "不用做到完美，只要帶一點好奇心出門。",
+      "tasks": ["拍一張今天的天空，幫它取一個名字。", "聽一首沒聽過的歌曲，留意讓你停下來的一句旋律。", "找到身邊三件喜歡的東西，對自己說出喜歡它們的理由。", "向朋友分享一句鼓勵的話，不必等待特別的日子。", "花五分鐘整理桌面，替明天的自己留一小塊空間。", "換一條熟悉路上的小岔路，找一個以前沒注意過的角落。"],
+      "buttonLabel": "再抽一個小冒險"
+    },
+    "recommendedMoods": ["bored", "good"]
+  },
+  {
+    "id": "MV-004",
+    "name": "好運加倍券",
+    "category": "快樂收藏",
+    "price": "一件開心的小事",
+    "description": "把微小的快樂，印成今天的紀念品。",
+    "effect": "把一件開心的事製成專屬紀念卡，隨時回味。",
+    "sideEffect": "當你開始留意，好事好像真的變多了。",
+    "receiptMessage": "快樂被記住的那一刻，就偷偷發生了第二次。",
+    "icon": "ticket",
+    "color": "#8E71C7",
+    "interactionType": "card",
+    "interactionConfig": {
+      "prompt": "今天，有哪一件小事讓你嘴角上揚？",
+      "placeholder": "例如：買到了最後一個喜歡的麵包。",
+      "cardTitle": "今天也有一點光",
+      "footer": "這一刻，值得被記得。",
+      "maxLength": 120
+    },
+    "recommendedMoods": ["good", "sad"]
+  },
+  {
+    "id": "MV-005",
+    "name": "神祕盲盒",
+    "category": "宇宙特選",
+    "price": "把選擇交給宇宙",
+    "description": "不知道需要什麼？讓今晚替你決定。",
+    "effect": "從四件心情商品中，隨機遇見屬於你的一份。",
+    "sideEffect": "可能剛剛好，就是你需要的那一個。",
+    "receiptMessage": "沒有選錯這回事，每一次相遇都有它的小小用意。",
+    "icon": "mystery",
+    "color": "#A6D8B5",
+    "interactionType": "mystery",
+    "interactionConfig": {
+      "candidateIds": ["MV-001", "MV-002", "MV-003", "MV-004"],
+      "revealMessage": "今晚，宇宙替你選了這一份。"
+    },
+    "recommendedMoods": ["unsure", "bored"]
+  }
+]
